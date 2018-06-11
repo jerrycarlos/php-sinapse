@@ -1,8 +1,8 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] == "POST"){	
 	ini_set('default_charset', 'UTF-8');
-	include "./config/defineDB.php";
-require ("./config/conectaBanco.class.php");
+	include "../config/defineDB.php";
+require ("../config/conectaBanco.class.php");
 	$banco = new ConectaBanco();
 	$banco->conectaBanco($dbserver,$dbuser,$dbpwd,$dbuse);
 	$data = json_decode(file_get_contents('php://input'), true);				

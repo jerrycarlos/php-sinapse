@@ -1,7 +1,7 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-	require "./config/defineDB.php";
-	require "./config/conectaBanco.class.php";	
+	require "../config/defineDB.php";
+	require "../config/conectaBanco.class.php";	
 	$banco = new ConectaBanco();
 	$banco->conectaBanco($dbserver,$dbuser,$dbpwd,$dbuse);
 		$json = array();					
